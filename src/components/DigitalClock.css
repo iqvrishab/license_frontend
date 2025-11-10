@@ -1,0 +1,26 @@
+.digital-clock {
+  display: flex;
+  align-items: center;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 110px;
+  font-weight: bold;
+  background: #181818;
+  border-radius: 18px;
+  padding: 18px 48px;
+  box-shadow: 0 2px 18px rgba(0,0,0,0.14);
+  margin-bottom: 24px;
+}
+.clock-hour {
+  color: #2196f3;
+  margin-right: 16px;
+  letter-spacing: 2px;
+}
+.clock-colon {
+  color: #fff;
+  margin: 0 16px;
+}
+.clock-minute {
+  color: #fff;
+  margin-left: 16px;
+  letter-spacing: 2px;
+} 
