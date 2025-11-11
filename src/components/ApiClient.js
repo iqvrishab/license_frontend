@@ -1,12 +1,14 @@
 import axios from 'axios';
 
-const apiBase = process.env.REACT_APP_API_BASE || 'http://localhost:4000/api';
+// Backend API endpoint - Lambda URL for license management
+// Full URLs will be: https://f3tigq2rmb74psnp6nafqqg54i0kysrw.lambda-url.ap-south-1.on.aws/backend_api/{endpoint}
+const apiBase = process.env.REACT_APP_API_BASE || 'https://f3tigq2rmb74psnp6nafqqg54i0kysrw.lambda-url.ap-south-1.on.aws/backend_api';
+
+// Debug: Log the API base URL (remove in production if desired)
+console.log('API Base URL:', apiBase);
 
 const apiClient = axios.create({
-  baseURL: apiBase,
-  headers: {
-    'ngrok-skip-browser-warning': 'true'
-  }
+  baseURL: apiBase
 });
 
 export const checkLicense = (licenseKey) => {
